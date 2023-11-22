@@ -1,0 +1,38 @@
+footer{
+	background-color: black;
+	color: white;
+	display: flex;
+	justify-content: space-between; /* Distribuye las divs de manera uniforme */
+    margin-left: 0px; /* Agrega un margen izquierdo de al menos 200px */
+    margin-right: 0px;
+	margin-top: 40px;
+	margin-bottom: 0px;
+
+}
+
+.footer_card_a {
+    margin-left: 250px; /* Agrega un margen izquierdo de al menos 200px */
+    margin-right: 50px;
+}
+
+.footer_card_a h2{
+	font-size: 22px;
+}
+.footer_card_a h3{
+	font-size: 16px;
+}
+
+
+/* Estilo para la segunda div (footer_card_b) */
+.footer_card_b {
+    margin-left: 50px; /* Agrega un margen izquierdo de al menos 200px */
+    margin-right: 250px;
+	font-size: 2 px;
+}
+
+.footer_card_b h2{
+	font-size: 22px;
+}
+.footer_card_b h3{
+	font-size: 16px;
+}
