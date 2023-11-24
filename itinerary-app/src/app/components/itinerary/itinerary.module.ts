@@ -1,0 +1,23 @@
+import { NgModule } from '@angular/core';
+import { CommonModule } from '@angular/common';
+
+import { ItineraryRoutingModule } from './itinerary-routing.module';
+import { RegisterItineraryComponent } from './register-itinerary/register-itinerary.component';
+import { ItineraryListComponent } from './itinerary-list/itinerary-list.component';
+import { ItineraryViewComponent } from './itinerary-view/itinerary-view.component';
+
+
+@NgModule({
+  //Declaro todos los componentes de itinerary
+  declarations: [
+    ItineraryListComponent,
+    ItineraryViewComponent,
+    RegisterItineraryComponent
+  ],
+  //importo las rutas
+  imports: [
+    CommonModule,
+    ItineraryRoutingModule
+  ]
+})
+export class ItineraryModule { }

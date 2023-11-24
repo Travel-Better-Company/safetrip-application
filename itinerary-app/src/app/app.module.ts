@@ -8,17 +8,22 @@ import { FooterComponent } from './components/shared/footer/footer.component';
 import { NavbarComponent } from './components/shared/navbar/navbar.component';
 
 import { HttpClientModule } from '@angular/common/http';
+import { ActivityModule } from './components/activity/activity.module';
+import { ItineraryModule } from './components/itinerary/itinerary.module';
 
 @NgModule({
   declarations: [
     AppComponent,
     HomeComponent,
     FooterComponent,
-    NavbarComponent
+    NavbarComponent,
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule
+    HttpClientModule,
+    AppRoutingModule,
+    ActivityModule,
+    ItineraryModule
   ],
   providers: [],
   bootstrap: [AppComponent]
