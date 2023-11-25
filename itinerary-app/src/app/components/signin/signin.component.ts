@@ -32,6 +32,9 @@ export class SigninComponent {
   }
 
   signin() {
+    // Update this.signinRequest with the form values
+    this.signinRequest = this.accountForm.value;
+  
     this.authService.signin(this.signinRequest).subscribe(
       (response) => {
         // Handle successful signin response
