@@ -1,0 +1,14 @@
+<!-- signup.component.html -->
+<!---Cambia a mat-form- field por favor-->
+<form (ngSubmit)="signup()">
+    <label for="name">Name:</label>
+    <input type="text" id="name" [(ngModel)]="signupRequest.name" required>
+  
+    <label for="email">Email:</label>
+    <input type="email" id="email" [(ngModel)]="signupRequest.email" required>
+  
+    <label for="password">Password:</label>
+    <input type="password" id="password" [(ngModel)]="signupRequest.password" required>
+  
+    <button type="submit">Sign Up</button>
+  </form>

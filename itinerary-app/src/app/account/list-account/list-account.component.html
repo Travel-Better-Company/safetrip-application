@@ -1,0 +1,42 @@
+<div class="container">
+  <h2>Historial de cuentas</h2>
+
+  <div class="filter-container">
+    <button mat-raised-button color="primary" routerLink="register-account">
+      Nueva Cuenta
+    </button>
+  </div>
+
+  <mat-table [dataSource]="dataSource">
+    <!-- Definir las columnas de la tabla -->
+    <ng-container matColumnDef="id">
+      <mat-header-cell *matHeaderCellDef> ID </mat-header-cell>
+      <mat-cell *matCellDef="let account"> {{ account.id }} </mat-cell>
+    </ng-container>
+
+    <ng-container matColumnDef="balance">
+      <mat-header-cell *matHeaderCellDef> Monto </mat-header-cell>
+      <mat-cell *matCellDef="let account">
+        {{ account.balance | currency }}
+      </mat-cell>
+    </ng-container>
+
+    <ng-container matColumnDef="accountNumber">
+      <mat-header-cell *matHeaderCellDef> Numero Cuenta </mat-header-cell>
+      <mat-cell *matCellDef="let account">
+        {{ account.accountNumber }}
+      </mat-cell>
+    </ng-container>
+
+    <!-- Agregar más columnas según tus necesidades -->
+
+    <mat-header-row *matHeaderRowDef="displayedColumns"></mat-header-row>
+    <mat-row *matRowDef="let row; columns: displayedColumns"></mat-row>
+  </mat-table>
+  <div class="no-data-message" *ngIf="noDataMessage">{{ noDataMessage }}</div>
+
+  <mat-paginator
+    [pageSizeOptions]="[5, 10, 25, 100]"
+    showFirstLastButtons
+  ></mat-paginator>
+</div>

@@ -1,0 +1,21 @@
+<div class="container payment-container">
+  <h2>Registrar Cuenta</h2>
+  <form [formGroup]="accountForm" (ngSubmit)="signin()" class="payment-form">
+    <mat-form-field>
+      <input matInput type="email" placeholder="Correo" formControlName="email" />
+    </mat-form-field>
+    <mat-form-field>
+      <input matInput type="password" placeholder="Contraseña" formControlName="password" />
+    </mat-form-field>
+
+    <div class="button-container">
+      <button mat-raised-button color="warn" type="button" class="cancel-button">
+        Cancelar
+      </button>
+
+      <button mat-raised-button color="primary" type="submit" [disabled]="accountForm.invalid">
+        Registrar Cuenta
+      </button>
+    </div>
+  </form>
+</div>

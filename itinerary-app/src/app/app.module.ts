@@ -8,8 +8,13 @@ import { FooterComponent } from './components/shared/footer/footer.component';
 import { NavbarComponent } from './components/shared/navbar/navbar.component';
 
 import { HttpClientModule } from '@angular/common/http';
-import { ActivityModule } from './components/activity/activity.module';
-import { ItineraryModule } from './components/itinerary/itinerary.module';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
+import { MatFormFieldModule } from '@angular/material/form-field'; // Import MatFormFieldModule
+import { MatInputModule } from '@angular/material/input'; // Import MatInputModule
+import { MatButtonModule } from '@angular/material/button'; // Import MatButtonModule
+
+import { SigninComponent } from './components/signin/signin.component';
+import { RouterModule } from '@angular/router';
 
 @NgModule({
   declarations: [
@@ -17,13 +22,18 @@ import { ItineraryModule } from './components/itinerary/itinerary.module';
     HomeComponent,
     FooterComponent,
     NavbarComponent,
+    SigninComponent
   ],
   imports: [
     BrowserModule,
-    HttpClientModule,
     AppRoutingModule,
-    ActivityModule,
-    ItineraryModule
+    FormsModule,
+    ReactiveFormsModule,
+    MatFormFieldModule,
+    MatInputModule,
+    MatButtonModule,
+    HttpClientModule,
+    RouterModule,
   ],
   providers: [],
   bootstrap: [AppComponent]
