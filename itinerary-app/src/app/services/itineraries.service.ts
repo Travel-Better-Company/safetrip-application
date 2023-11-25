@@ -9,9 +9,10 @@ import { Sharing } from '../models/Sharing';
 })
 export class ItinerariesService {
   private baseURL:string = "http://localhost:8080/api/v1/itineraries";
-  private token =
-    'eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJob2xhQGdtYWlsLmNvbSIsImlhdCI6MTcwMDkyMTcwOSwiZXhwIjoxNzAwOTIzMTQ5fQ.zyn-kv0QvWBCYKt5uU2pcyOLlvijkPAotdb2VP3-T_g'; 
   constructor(private http:HttpClient){}
+  private token =
+  'eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJob2xhQGdtYWlsLmNvbSIsImlhdCI6MTcwMDkyMjU5NSwiZXhwIjoxNzAwOTI0MDM1fQ.DfxZ-H842guj9cqjp2Ghnoz34leX2ExtRoN6OUygjRQ'; 
+
   //Las funciones deben tener la misma estructura o similar a nuestro controller de nuestro backend
   createItinerary(resource:Itineraries): Observable<ItinerariesResponse[]>{
     return this.http.post<ItinerariesResponse[]>(this.baseURL,resource);
