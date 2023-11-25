@@ -2,8 +2,11 @@ import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
 import { HomeComponent } from './components/home/home.component';
 import {ItinerarioComponent} from "./components/itinerario/itinerario.component";
+import { SigninComponent } from './components/signin/signin.component';
+
 const routes: Routes = [
   {path: 'home', component: HomeComponent},
+  {path: 'signin', component: SigninComponent},
   {path: 'itinerario', component: ItinerarioComponent},
   {
     path: 'itineraries',
