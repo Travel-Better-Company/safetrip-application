@@ -8,6 +8,7 @@ import { ItineraryViewComponent } from './itinerary-view/itinerary-view.componen
 
 import {MatButtonModule} from '@angular/material/button';
 import {MatCardModule} from '@angular/material/card';
+import { FlexLayoutModule } from '@angular/flex-layout';
 @NgModule({
   //Declaro todos los componentes de itinerary
   declarations: [
@@ -19,7 +20,8 @@ import {MatCardModule} from '@angular/material/card';
   imports: [
     CommonModule,
     ItineraryRoutingModule,
-    //MatCardModule,
+    MatCardModule,
+    FlexLayoutModule
     //MatButtonModule
   ]
 })
