@@ -5,6 +5,7 @@ import { Observable } from 'rxjs';
 import { SignupRequestDto } from '../models/signup-request.dto';
 import { UserResponseDto } from '../models/user-response.dto';
 import { SigninRequestDto } from '../models/signin-request.dto';
+import { LogoutResponse } from '../models/logout-response.model';
 import { JwtAuthenticationResponseDto } from '../models/jwt-authentication-response.dto';
 
 
@@ -22,5 +23,8 @@ export class AuthService {
 
   signin(request: SigninRequestDto): Observable<JwtAuthenticationResponseDto> {
     return this.http.post<JwtAuthenticationResponseDto>(`${this.baseUrl}/api/v1/auth/signin`, request);
+  }
+  logout(secureLogout: boolean): Observable<LogoutResponse> {
+    return this.http.post<LogoutResponse>(this.baseUrl, { secureLogout });
   }
 }
