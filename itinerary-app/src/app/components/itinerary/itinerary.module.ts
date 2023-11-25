@@ -6,7 +6,8 @@ import { RegisterItineraryComponent } from './register-itinerary/register-itiner
 import { ItineraryListComponent } from './itinerary-list/itinerary-list.component';
 import { ItineraryViewComponent } from './itinerary-view/itinerary-view.component';
 
-
+import {MatButtonModule} from '@angular/material/button';
+import {MatCardModule} from '@angular/material/card';
 @NgModule({
   //Declaro todos los componentes de itinerary
   declarations: [
@@ -17,7 +18,9 @@ import { ItineraryViewComponent } from './itinerary-view/itinerary-view.componen
   //importo las rutas
   imports: [
     CommonModule,
-    ItineraryRoutingModule
+    ItineraryRoutingModule,
+    //MatCardModule,
+    //MatButtonModule
   ]
 })
 export class ItineraryModule { }
