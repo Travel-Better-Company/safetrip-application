@@ -1,0 +1,26 @@
+
+<div class="itinerary-form">
+  <h2>Planificar Viaje</h2>
+  <form [formGroup]="itineraryForm" (ngSubmit)="onSubmit()">
+
+    <label for="activityName">Nombre</label>
+    <input type="text" id="activityName" formControlName="activityName">
+
+    <label for="startDate">Fecha de inicio</label>
+    <input type="date" id="startDate" formControlName="startDate">
+
+    <label for="endDate">Fecha final</label>
+    <input type="date" id="endDate" formControlName="endDate">
+
+    <button (click)="planActivities()" style="background-color: #2ABAC1">Guardar</button>
+
+    <div *ngIf="itineraryForm.errors" class="error">
+      {{ itineraryForm.errors | json }}
+    </div>
+
+  </form>
+
+  <br>
+
+  <button (click)="planActivities()">Planificar Actividades</button>
+</div>
